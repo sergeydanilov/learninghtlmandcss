@@ -28,6 +28,10 @@
 
 <p id="checkText">TEXT HERE</p>
 
+<div id="demoDiv" style="width: 100%; height: 300px;;background-color: blue">
+    TESXT DIV HERE
+</div>
+
 <script>
     document.forms[0]
 
@@ -37,6 +41,18 @@
     document.contactForm
 
     document.getElementById("mainForm");
+
+
+    var helpIcon = document.getElementById("demoDiv")
+    function showHelpText() {
+        window.alert('Some help text');
+    }
+    helpIcon.addEventListener("mouseover", showHelpText, false);
+    // Alternatively, using an anonymous function
+//    helpIcon.addEventListener("mouseover",
+//            function() { window.alert('Some help text'); }, false);
+
+
 </script>
 
 </body>
