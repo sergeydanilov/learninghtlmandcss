@@ -46,6 +46,11 @@ public class MainPoint {
             return gson.toJson(fistDataEntity);
         });
 
+        get("/index2page", (req, res) -> {
+            res.redirect("/index2.html");
+            return "";
+        });
+
         exception(IllegalArgumentException.class, (e, req, res) -> {
             res.status(400);
             res.body(toJson(new ResponseError(e)));
