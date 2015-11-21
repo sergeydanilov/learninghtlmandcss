@@ -5,8 +5,26 @@
     <title>This is a first page which lern you to do something</title>
 </head>
 <body>
-<p> This is a first page which lern you to do something </p>
+<p> This is HTML 5 Form Demo </p>
 
-<p style="font-weight: bold">NEW LINE </p>
+<form name="userLogin" method="post"
+      action="login.aspx">
+    <fieldset>
+        <legend>Enter your log in
+            details:</legend>
+        <div id="usernameField" class="field">
+            <input id="uname" name="username"
+                   type="text" placeholder="First and Last
+Name" />
+            <label for="uname">User's Name:</label>
+        </div>
+        <div id="passwordField" class="field">
+            <input id="pwd" name="password" type="password" placeholder="Password" />
+            <label for="pwd">User's Password:</label>
+        </div>
+    </fieldset>
+    <input type="submit" value="Send" />
+</form>
+
 </body>
 </html>
