@@ -10,20 +10,32 @@
 <form name="userLogin" method="post"
       action="login.aspx">
     <fieldset>
-        <legend>Enter your log in
-            details:</legend>
+        <legend>Enter your log in details:</legend>
         <div id="usernameField" class="field">
             <input id="uname" name="username"
                    type="text" placeholder="First and Last
-Name" />
+Name"/>
             <label for="uname">User's Name:</label>
         </div>
         <div id="passwordField" class="field">
-            <input id="pwd" name="password" type="password" placeholder="Password" />
+            <input id="pwd" name="password" type="password" placeholder="Password"/>
             <label for="pwd">User's Password:</label>
         </div>
+
+        <div id="agedField" class="field">
+            <input id="ageCategory" name="ageCategory" list="ageRanges"/>
+            <datalist id="ageRanges">
+                <option value="Under twos"></option>
+                <option value="2 - 7"></option>
+                <option value="2 - 15"></option>
+                <option value="2 - 20"></option>
+                <option value="8 - 12"></option>
+                <option value="13-17"></option>
+                <option value="Adult"></option>
+            </datalist>
+        </div>
     </fieldset>
-    <input type="submit" value="Send" />
+    <input type="submit" value="Send"/>
 </form>
 
 </body>
