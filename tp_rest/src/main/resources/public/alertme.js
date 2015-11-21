@@ -1,0 +1,1 @@
+alert('I am a line of JavaScript from file');
