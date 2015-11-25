@@ -3,10 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>This is a first page which lern you to do something</title>
+
+
+    <style>
+
+        input {
+            border: solid 11px blueviolet;
+        }
+        input:required {
+            border: solid 1px red;
+        }
+
+        input:invalid {
+            border: solid 5px red;
+            background-color: red;
+        }
+
+        input:valid {
+            border: blue;
+            background-color: antiquewhite;
+        }
+
+    </style>
 </head>
 <body>
 <p> This is a first page which lern you to do something </p>
 
 <p style="font-weight: bold">NEW LINE </p>
+
+<form autocomplete="off">
+
+    <input id="ageInput" name="ageInput" list="ageRange"/>
+    <datalist id="ageRange">
+        <option value="2 - 5"></option>
+        <option value="2 - 7"></option>
+        <option value="2 - 7"></option>
+        <option value="8-17"></option>
+
+    </datalist>
+
+
+    <div>
+        <select id="selectList">
+            <optgroup label="Euro">
+                <option value="Volvo">Volvo</option>
+                <option value="BMW">BMW</option>
+                <optgroup label="Chine">
+                    <option value="Volvo">Volvo</option>
+                    <option value="BMW">BMW</option>
+                </optgroup>
+            </optgroup>
+            <optgroup label="UD">
+                <option value="Ford">Ford</option>
+                <option value="Kadilak">Kadilak</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div style="margin: 20px;">
+        <input type="number" id="percent" min="0" max="100" step="5" value="10" autocomplete="on" required>
+    </div>
+
+    <div style="margin: 20px;">
+        <input type="text" pattern="[0-9][0-9][A-Z]{3}" placeholder="ZIP INDEX" title="sssssssssssssssssssssss" >
+    </div>
+
+
+</form>
+
 </body>
 </html>
