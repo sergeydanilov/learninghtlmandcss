@@ -25,4 +25,26 @@ function tryMyLuck() {
     }
 }
 
+function getResponse(request) {
+    var type = request.getResponseHeader("Content-Type");
+    switch (type) {
+        case "text/xml" :
+            return request.responseXML;
+        default :
+            return request.responseText;
+    }
+}
+
+function getResponseJSON(request) {
+    var type = request.getResponseHeader();
+    switch( type ) {
+        case "text/xml" :
+            return request.responseXML;
+        case "application/json" :
+            return JSON.parse(request.responseText);
+        default :
+            return request.responseText;
+    }
+}
+
 tryMyLuck();
