@@ -31,7 +31,19 @@
 
 <p style="font-weight: bold">NEW LINE </p>
 
-<form autocomplete="off">
+
+<script>
+
+    function checkSomeInputs() {
+        var inp = document.getElementById("inpId");
+        inp.setCustomValidity("VSE PKLOHO!!!!!!!!!!!!!!!!!!!");
+        inp.checkValidity();
+        return false;
+    }
+
+</script>
+
+<form autocomplete="off" onsubmit="return checkSomeInputs()">
 
     <input id="ageInput" name="ageInput" list="ageRange"/>
     <datalist id="ageRange">
@@ -65,9 +77,15 @@
     </div>
 
     <div style="margin: 20px;">
-        <input type="text" pattern="[0-9][0-9][A-Z]{3}" placeholder="ZIP INDEX" title="sssssssssssssssssssssss" >
+        <input id="inpId" type="text" pattern="[0-9][0-9][A-Z]{3}" placeholder="ZIP INDEX" >
     </div>
 
+    <div style="margin: 20px;">
+        <input id="inpId2" type="text" pattern="[0-9][0-9][A-Z]{3}" placeholder="ZIP INDEX" >
+    </div>
+
+
+    <input type="submit" value="submit" />
 
 </form>
 
