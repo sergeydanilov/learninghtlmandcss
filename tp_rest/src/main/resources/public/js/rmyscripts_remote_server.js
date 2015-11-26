@@ -47,4 +47,23 @@ function getResponseJSON(request) {
     }
 }
 
-tryMyLuck();
+function sendSolidRequest() {
+    var request = new XMLHttpRequest();
+    try {
+
+        request.open("GET", "/firstData", false);
+        request.onreadystatechange = function() {
+            console.log("current staus = " + request.readyState);
+            if (request.readyState === 4) {
+                var response = JSON.parse(request.responseText);
+                console.log("request is recieved");
+                console.dir(response);
+            }
+        };
+        request.send();
+    } catch(exception) {
+        console.lof("exception occurs = " + exception);
+    }
+}
+
+
