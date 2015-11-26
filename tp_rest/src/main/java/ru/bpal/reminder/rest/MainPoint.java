@@ -1,6 +1,7 @@
 package ru.bpal.reminder.rest;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
