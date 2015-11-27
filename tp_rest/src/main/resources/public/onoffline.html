@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var s = document.getElementById("demo");
+    function onlineStatus() {
+        s.innerHTML = "Online.";
+    }
+    function offlineStatus() {
+        s.innerHTML = "Offline.";
+    }
+    onload = function() {
+        s = document.getElementById("statusDiv");
+        if( navigator.onLine ) {
+            onlineStatus();
+        } else {
+            offlineStatus();
+        }
+        window.addEventListener("online", onlineStatus, true);
+        window.addEventListener("offline", offlineStatus, true);
+    }
+</script>
+
+<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed!";
+    }
+</script>
+
+
+
+
+</body>
+</html>
